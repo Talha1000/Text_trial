@@ -1,15 +1,16 @@
-import mysql.connector
 from mysql.connector import (connection)
-from mysql.connector import errorcode
 
 conn = connection.MySQLConnection(
     user='root',
     password='',
     host='localhost',
-    database='trial_db'
 )
 
+mycursor = conn.cursor()
+
+mycursor.execute("create database people_db")
+
 conn.commit()
-print("Database Connected.")
+print("Database Created.")
 
 conn.close()
