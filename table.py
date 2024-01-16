@@ -1,12 +1,12 @@
 import mysql.connector
-from mysql.connector import errorcode
 
 conn = mysql.connector.connect(
     user='root',
     password='',
     host='localhost',
-    database='trial_db'
+    database='people_db'
 )
+print("Database Connected.")
 
 mycursor = conn.cursor()
 
@@ -15,4 +15,4 @@ mycursor.execute(
 )
 
 conn.commit()
-print("Table Created.")
+print("\nTable Created.")
