@@ -10,4 +10,6 @@ conn = connection.MySQLConnection(
 )
 
 conn.commit()
+print("Database Connected.")
+
 conn.close()
